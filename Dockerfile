@@ -1,6 +1,5 @@
-FROM node:20-alpine
-RUN npm install -g npm@10
+FROM node:22-alpine
 WORKDIR /app
-COPY . .
+COPY package.json server.js ./
 EXPOSE 8080
 CMD ["node", "server.js"]
